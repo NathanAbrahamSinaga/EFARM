@@ -369,7 +369,170 @@ body {
     transform: scale(1.05);
 }
 
-/* --- 4. NEWS SECTION --- */
+/* --- 4. STATISTICS SECTION --- */
+.stats {
+    background-color: var(--bg-dark-green);
+    padding: 80px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    text-align: center;
+    color: white;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.stat-label {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.3px;
+}
+
+/* --- 5. SERVICES SECTION --- */
+.services {
+    padding: 100px 0;
+    background: #FAFAF8;
+}
+
+.services-header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 80px;
+    margin-bottom: 60px;
+    align-items: start;
+}
+
+.services-subtitle {
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 500;
+    padding-top: 8px;
+}
+
+.services-header-content {
+    max-width: 700px;
+}
+
+.services-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: var(--text-dark);
+}
+
+.services-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+.services-accordion {
+    border-top: 1px solid #E0E0E0;
+}
+
+.service-item {
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.service-header:hover {
+    opacity: 0.7;
+}
+
+.service-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-number {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #999;
+}
+
+.service-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.service-toggle {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--text-dark);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-content {
+    padding: 0 0 40px 0;
+    display: none;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-item.active .service-content {
+    display: block;
+}
+
+.service-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 750px;
+}
+
+.service-image {
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    height: 400px;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- 6. NEWS SECTION --- */
 .news {
     padding: 100px 0;
     background: white;
@@ -459,7 +622,7 @@ body {
     line-height: 1.6;
 }
 
-/* --- 5. FAQ SECTION --- */
+/* --- 7. FAQ SECTION --- */
 .faq {
     background-color: var(--bg-dark-green);
     color: white;
@@ -475,4 +638,90 @@ body {
 .faq-content h5 {
     font-weight: 500;
     margin-bottom: 10px;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.faq-content h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.faq-desc {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+/* Accordion Styling */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accordion-item {
+    background: white;
+    border-radius: 18px;
+    padding: 28px 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 20px;
+}
+
+.accordion-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    flex: 1;
+}
+
+.accordion-icon {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--text-dark);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.accordion-body {
+    display: none;
+    padding-top: 20px;
+    color: #666;
+    line-height: 1.7;
+    font-size: 0.98rem;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.accordion-item.active .accordion-body {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
