@@ -1,4 +1,4 @@
-# Efarm - Sustainable Agriculture Landing Page
+# Efarm - Sustainable Agriculture
 
 A modern project for sustainable farming solutions
 
